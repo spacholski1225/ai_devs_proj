@@ -1,10 +1,11 @@
 ﻿using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using ai_devs_proj.LLMHelpers;
 
 namespace ai_devs_proj.S01E01
 {
-    internal class Login(string url, string username, string password)
+    public class Login(string url, string username, string password)
     {
         public async Task TryToLoginAsync()
         {
@@ -13,7 +14,7 @@ namespace ai_devs_proj.S01E01
 
             var question = await FetchSecurityQuestion(httpClient);
 
-            var answer = await GetAnswerFromGPT(question);
+            var answer = await question.GetAnswerFromGPT();
 
             await LoginAsync(httpClient, url, username, password, answer);
         }
@@ -39,40 +40,6 @@ namespace ai_devs_proj.S01E01
                 Console.WriteLine($"Cannot Get Question: {ex.Message}");
                 return null;
             }
-        }
-
-        private static async Task<string> GetAnswerFromGPT(string question)
-        {
-            using var httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Environment.GetEnvironmentVariable("OpenAI_Key"));
-
-            var prompt = $"Answer the following security question. Just return a number. Question: {question}";
-            var requestBody = new
-            {
-                model = "gpt-3.5-turbo",
-                messages = new[]
-                {
-                new { role = "user", content = prompt }
-            },
-                max_tokens = 10
-            };
-
-            var jsonRequestBody = JsonSerializer.Serialize(requestBody);
-            var content = new StringContent(jsonRequestBody, Encoding.UTF8, "application/json");
-
-            var response = await httpClient.PostAsync("https://api.openai.com/v1/chat/completions", content);
-            response.EnsureSuccessStatusCode();
-
-            var responseBody = await response.Content.ReadAsStringAsync();
-            var jsonDocument = JsonDocument.Parse(responseBody);
-            var answer = jsonDocument.RootElement
-                                      .GetProperty("choices")[0]
-                                      .GetProperty("message")
-                                      .GetProperty("content")
-                                      .GetString()
-                                      ?.Trim();
-
-            return answer ?? string.Empty;
         }
 
         private static async Task LoginAsync(HttpClient httpClient, string loginEndpoint, string username, string password, string answer)
