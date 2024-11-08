@@ -1,11 +1,11 @@
-﻿using ai_devs_proj.S01E03;
+﻿using ai_devs_proj.S01E05;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        var caller = new ApiCaller("https://centrala.ag3nts.org");
+        var caller = new OllamaCaller("/");
 
-        await caller.FinishTask();
+        await caller.DoTask();
     }
 }
