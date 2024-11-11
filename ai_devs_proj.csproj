@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="S02E01\Transcription\" />
+  </ItemGroup>
+
 </Project>

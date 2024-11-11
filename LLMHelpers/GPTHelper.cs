@@ -6,26 +6,24 @@ namespace ai_devs_proj.LLMHelpers
 {
     public static class GPTHelper
     {
-        public static async Task<string> GetAnswerFromGPT(this string question, string additionalContext = "")
+        public static async Task<string> GetAnswerFromGPT(string prompt)
         {
             using var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Environment.GetEnvironmentVariable("OpenAI_Key"));
 
-            var prompt = $"Answer the following security question. Just return an answer. Question: {question}";
 
-            if (!string.IsNullOrWhiteSpace(additionalContext))
+            if (string.IsNullOrWhiteSpace(prompt))
             {
-                prompt = $"{prompt} Take in mind this additional context: {additionalContext}";
+                prompt = "Return: \"I do not understand \"";
             }
 
             var requestBody = new
             {
-                model = "gpt-3.5-turbo",
+                model = "gpt-4o-mini",
                 messages = new[]
                 {
                     new { role = "user", content = prompt }
-                },
-                max_tokens = 10
+                }
             };
 
             var jsonRequestBody = JsonSerializer.Serialize(requestBody);

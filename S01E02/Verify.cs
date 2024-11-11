@@ -33,7 +33,7 @@ namespace ai_devs_proj.S01E02
             }
 
 
-            var answer = await responseMessage.Text.GetAnswerFromGPT(ADDITIONAL_CONTEXT);
+            var answer = await GPTHelper.GetAnswerFromGPT(ADDITIONAL_CONTEXT);
             Console.WriteLine($"Answer: {answer}");
 
             var answerMessage = new Message

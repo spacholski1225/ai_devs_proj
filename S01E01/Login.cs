@@ -14,7 +14,7 @@ namespace ai_devs_proj.S01E01
 
             var question = await FetchSecurityQuestion(httpClient);
 
-            var answer = await question.GetAnswerFromGPT();
+            var answer = await GPTHelper.GetAnswerFromGPT(question);
 
             await LoginAsync(httpClient, url, username, password, answer);
         }
