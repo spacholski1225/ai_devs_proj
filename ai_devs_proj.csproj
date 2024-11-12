@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="S02E01\Transcription\" />
+    <Folder Include="S02E02\Imgs\" />
   </ItemGroup>
 
 </Project>
