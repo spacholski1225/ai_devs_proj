@@ -5,7 +5,7 @@ namespace ai_devs_proj.ApiHelpers
 {
     internal static class ApiHelper
     {
-        internal static async Task<HttpResponseMessage> PostCompletedTask(string taskName, object answer, string uri)
+        internal static async Task<HttpResponseMessage> PostCompletedTask(string taskName, object answer, string uri = "https://centrala.ag3nts.org/report")
         {
             var returnTask = new ReturnTaskModel
             {

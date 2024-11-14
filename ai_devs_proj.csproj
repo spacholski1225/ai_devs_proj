@@ -10,6 +10,8 @@
   <ItemGroup>
     <Folder Include="S02E01\Transcription\" />
     <Folder Include="S02E02\Imgs\" />
+    <Folder Include="S02E04\Ocr\" />
+    <Folder Include="S02E04\Transcription\" />
   </ItemGroup>
 
 </Project>

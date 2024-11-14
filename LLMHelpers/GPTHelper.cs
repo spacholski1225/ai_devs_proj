@@ -19,7 +19,7 @@ namespace ai_devs_proj.LLMHelpers
 
             var requestBody = new
             {
-                model = "gpt-4o-mini",
+                model = "gpt-4o",
                 messages = new[]
                 {
                     new { role = "user", content = prompt }
