@@ -1,0 +1,6 @@
+﻿<thinking>01: The text mentions a fruit without seeds being transmitted in time, and the description from the image talks about a strawberry, which is consistent with a typical fruit used in such experiments.
+02: The test photo description in the text begins with "W jednym z naszych najbardziej spektakularnych testów udało się przesłać obraz fotograficzny do przeszłości," and mentions it was taken on a market, but no specific city is given directly in the provided text. Based on context clues in the text, Kraków is often referenced, potentially linking to that city's market.
+03: The transcription audio mentions Grudziądz and a hotel, suggesting Bomba wanted to find a hotel in Grudziądz.
+04: The text mentions resztki jedzenia found by the temporal chamber in the context of Rafał's experiment, and while it does not specify the dish in the text or transcription explicitly, the audio transcription refers to "nie wywoła" possibly indicating remnants of the food item he took with him.
+05: The text describes a new model language AGI named BNW-01 as standing for "Brave New World".</thinking>
+<answer>01-strawberry02-Kraków03-Hotel04-pizza05-Brave New World</answer>
