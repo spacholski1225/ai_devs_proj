@@ -1,0 +1,10 @@
+﻿ 2024-11-12_report-00-sektor_C4.txt:Godzina, jednostka organiczna, północne skrzydło, fabryka, Aleksander Ragowski, skan biometryczny, baza danych, dział kontroli, patrol, nauczyciel
+ 2024-11-12_report-01-sektor_A1.txt:alarm, ruch, zwierzyna, las, patrol, bezpieczeństwo
+ 2024-11-12_report-02-sektor_A3.txt:monitoring, patrol, aktywność, obszar, zadanie
+ 2024-11-12_report-03-sektor_A3.txt:patrol, czujniki, monitorowanie, życie organiczne, stan, zakłócenia
+ 2024-11-12_report-04-sektor_B2.txt:patrol, teren, komunikacja, bezpieczeństwo
+ 2024-11-12_report-05-sektor_C1.txt:godzina, sensor, dźwięk, detektor, ruch, gotowość, sygnał, patrol, monitorowanie
+ 2024-11-12_report-06-sektor_C2.txt:patrol, jednostka, skaner, temperatura, ruch, sektor, stabilność, obszar
+ 2024-11-12_report-07-sektor_C4.txt:Barbara Zawadzka, czujnik dźwięku, ultradźwięki, nadajnik, las, analiza, odciski palców, dział śledczy, zabezpieczenie, patrol, programista JavaScript, C4
+ 2024-11-12_report-08-sektor_A1.txt:monitoring, obszar patrolowy, czujniki, aktywność, obserwacja, wytyczne.
+ 2024-11-12_report-09-sektor_C2.txt:patrol, obszar, czujnik, sygnał, sektor, cykl

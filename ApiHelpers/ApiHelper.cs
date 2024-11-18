@@ -17,7 +17,7 @@ namespace ai_devs_proj.ApiHelpers
             var request = JsonSerializer.Serialize(returnTask, new JsonSerializerOptions { WriteIndented = true });
 
             using var client = new HttpClient();
-
+            Console.WriteLine(request);
             return await client.PostAsync(uri, new StringContent(request));
         }
     }
