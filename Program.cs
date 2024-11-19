@@ -1,10 +1,10 @@
-﻿using ai_devs_proj.S03E01;
+﻿using ai_devs_proj.S03E02;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        var metaData = new Metadata();
-        await metaData.Run();
+        var embeddingTask = new Finisher();
+        await embeddingTask.Finish();
     }
 }
