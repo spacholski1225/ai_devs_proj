@@ -1,10 +1,10 @@
-﻿using ai_devs_proj.S03E03;
+﻿using ai_devs_proj.S03E04;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        var databaseService = new DatabaseService();
-        await databaseService.Run();
+        var finder = new FindLocation();
+        await finder.RunAsync();
     }
 }
