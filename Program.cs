@@ -1,10 +1,10 @@
-﻿using ai_devs_proj.S03E04;
+﻿using ai_devs_proj.S03E05;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        var finder = new FindLocation();
-        await finder.RunAsync();
+        var neo4j = new Neo4jService();
+        await neo4j.Run();
     }
 }
