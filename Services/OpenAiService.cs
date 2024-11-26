@@ -1,10 +1,8 @@
 ﻿using ai_devs_proj.S02E02.Models;
 using System.Net.Http.Headers;
-using System.Reflection.Metadata;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ai_devs_proj.Services
 {
@@ -21,11 +19,11 @@ namespace ai_devs_proj.Services
             _openAiClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Environment.GetEnvironmentVariable("OpenAI_Key"));
         }
 
-        public async Task<string> CallToGPT(string systemPrompt, string userPrompt)
+        public async Task<string> CallToGPT(string systemPrompt, string userPrompt, string model = "gpt-4o")
         {
             var requestBody = new
             {
-                model = "gpt-4o",
+                model = model,
                 messages = new[]
                 {
                     new

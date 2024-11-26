@@ -1,11 +1,10 @@
-﻿using ai_devs_proj.S03E05;
-using ai_devs_proj.S04E01;
+﻿using ai_devs_proj.S04E02;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        var interfaceService = new InterfaceService();
-        await interfaceService.RunAsync();
+        var finetuned = new FineTunedService();
+        await finetuned.RunAsync();
     }
 }
