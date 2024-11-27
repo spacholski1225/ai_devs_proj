@@ -1,10 +1,10 @@
-﻿using ai_devs_proj.S04E02;
+﻿using ai_devs_proj.S04E03;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        var finetuned = new FineTunedService();
-        await finetuned.RunAsync();
+        var scrapper = new ScrapperService();
+        await scrapper.RunAsync();
     }
 }
