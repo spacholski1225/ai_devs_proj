@@ -1,6 +1,0 @@
-@DroneApi_HostAddress = http://localhost:5109
-
-POST {{DroneApi_HostAddress}}/api/drone/
-Accept: application/json
-
-###

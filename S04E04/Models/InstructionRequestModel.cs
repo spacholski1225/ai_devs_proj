@@ -1,4 +1,4 @@
-﻿namespace DroneApi.Models
+﻿namespace ai_devs_proj.S04E04.Models
 {
     public class InstructionRequestModel
     {

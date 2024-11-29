@@ -1,10 +1,10 @@
-﻿using DroneApi.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Text;
 using System.Net.Http.Headers;
+using ai_devs_proj.S04E04.Models;
 
-namespace DroneApi.Controllers
+namespace ai_devs_proj.S04E04.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -55,7 +55,7 @@ namespace DroneApi.Controllers
         {
             var requestBody = new
             {
-                model = model,
+                model,
                 messages = new[]
                 {
                     new
@@ -94,3 +94,4 @@ namespace DroneApi.Controllers
         }
     }
 }
+*/
