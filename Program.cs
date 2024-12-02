@@ -1,10 +1,10 @@
-﻿using ai_devs_proj.S04E05;
+﻿using ai_devs_proj.S05E01;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        var analyzer = new PdfAnalyzer();
-        await analyzer.RunAsync();
+        var service = new AgentService();
+        await service.RunAsync();
     }
 }

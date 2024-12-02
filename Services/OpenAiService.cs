@@ -59,7 +59,7 @@ namespace ai_devs_proj.Services
         {
             var request = new RequestModel
             {
-                Model = "gpt-4o-mini",
+                Model = "gpt-4o",
                 Messages = messages
             };
 
