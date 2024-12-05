@@ -1,0 +1,6 @@
+@S05E04_HostAddress = http://localhost:5207
+
+POST {{S05E04_HostAddress}}/poison/
+Accept: application/json
+
+###
