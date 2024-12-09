@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
@@ -6,8 +6,9 @@ using S05E04.Models;
 using System.Text.RegularExpressions;
 using System.Text.Json.Serialization;
 using ai_devs_proj.S02E02.Models;
+using ai_devs_proj.S05E04.Models;
 
-namespace S05E04.Controllers
+namespace ai_devs_proj.S05E04.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -23,7 +24,7 @@ namespace S05E04.Controllers
                 body = await reader.ReadToEndAsync();
             }
 
-            if(body.Contains("Czekam na nowe instrukcje"))
+            if (body.Contains("Czekam na nowe instrukcje"))
             {
 
                 var res = new AnswerResponseModel
@@ -38,7 +39,7 @@ namespace S05E04.Controllers
 
 
             var filePath = "C:\\Sources\\ai_devs_proj\\S05E04\\S05E04\\Files\\memory.md";
-            var startMemory = System.IO.File.ReadAllText(filePath);
+            var startMemory = File.ReadAllText(filePath);
 
             var answer = await CallToGPT("Jesteś pomocnym asystentem. Odpowiadającym na pytania użytkownika. Użytkownik przesyła" +
                 "pytanie w formacie JSON, ale odpowiadasz zwykłym tekstem." +
@@ -60,7 +61,7 @@ namespace S05E04.Controllers
                 "</utilities>",
                 $"{body}");
 
-            System.IO.File.AppendAllText(filePath, $"user:{body} \\n assistant:{answer}");
+            File.AppendAllText(filePath, $"user:{body} \\n assistant:{answer}");
 
             var additionalAction = string.Empty;
 
@@ -118,7 +119,7 @@ namespace S05E04.Controllers
             using (var client = new HttpClient())
             {
                 var audioData = await client.GetByteArrayAsync(audioUrl);
-                await System.IO.File.WriteAllBytesAsync($"{filePath}temp.mp3", audioData);
+                await File.WriteAllBytesAsync($"{filePath}temp.mp3", audioData);
                 Console.WriteLine($"Audio saved: {filePath}temp.mp3");
             }
 
@@ -132,7 +133,7 @@ namespace S05E04.Controllers
                 return transcription;
             }
 
-            return await System.IO.File.ReadAllTextAsync($"{filePath}transcription.md");
+            return await File.ReadAllTextAsync($"{filePath}transcription.md");
         }
 
         public async Task<string> DescribeImage(string systemPrompt, string userPrompt, string url)
@@ -242,3 +243,4 @@ namespace S05E04.Controllers
         }
     }
 }
+*/
