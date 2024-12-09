@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="S05E05\Files\rafal_blog.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="S05E05\Files\rafal_blog.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
@@ -35,6 +43,7 @@
     <Folder Include="S02E04\Transcription\" />
     <Folder Include="S02E05\Transcription\" />
     <Folder Include="S04E05\Files\" />
+    <Folder Include="S05E05\Files\Answers\" />
   </ItemGroup>
 
   <ItemGroup>
